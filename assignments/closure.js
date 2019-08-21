@@ -4,6 +4,15 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 
+function showLocation (city, state) {
+  var location = "You're currently at ";
+    function fullLocation () {
+      return location + city + ", " + state;
+    }
+  return fullLocation ();
+}
+
+console.log( showLocation ("Boston", "MA"));
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
