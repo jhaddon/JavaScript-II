@@ -49,8 +49,13 @@ getLength(items, (length) => {
 });
 
 function last(arr, cb) {
+  cb(arr[(arr.length-1)])
   // last passes the last item of the array into the callback.
 }
+
+last(items, (lastItem) => {
+  console.log(lastItem);
+});
 
 function sumNums(x, y, cb) {
   return cb(x+y);
@@ -71,9 +76,12 @@ multiplyNums(3,10, (multiplies) => {
 });
 
 function contains(item, list, cb) {
+  return cb(list.includes(item));
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
 }
+
+contains('Pencil', items, console.log);
 
 /* STRETCH PROBLEM */
 
